@@ -1,0 +1,24 @@
+﻿@page "/"
+@inject NavigationManager NavigationManager
+
+<h1>Hello, User..</h1>
+
+<div>Welcome to the User login panel</div>
+
+<button class="btn flowrino-btn" @onclick ="NavigatetoLogin">Login</button>
+<span>&nbsp;&nbsp;</span>
+<button class="btn btn-primary" @onclick="NavigatetoContact">Contact</button>
+
+@code{
+    private void NavigatetoLogin()
+    {
+        NavigationManager.NavigateTo("/login");
+    }
+    private void NavigatetoContact()
+    {
+        NavigationManager.NavigateTo("/contact");
+    }
+
+}
+
+

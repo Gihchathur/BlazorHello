@@ -1,0 +1,10 @@
+C:\Users\gihan.c\source\repos\HelloBlazor\HelloBlazor\HelloBlazor\Shared\bin\Debug\netstandard2.1\HelloBlazor.Shared.deps.json
+C:\Users\gihan.c\source\repos\HelloBlazor\HelloBlazor\HelloBlazor\Shared\bin\Debug\netstandard2.1\HelloBlazor.Shared.dll
+C:\Users\gihan.c\source\repos\HelloBlazor\HelloBlazor\HelloBlazor\Shared\bin\Debug\netstandard2.1\HelloBlazor.Shared.pdb
+C:\Users\gihan.c\source\repos\HelloBlazor\HelloBlazor\HelloBlazor\Shared\obj\Debug\netstandard2.1\HelloBlazor.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gihan.c\source\repos\HelloBlazor\HelloBlazor\HelloBlazor\Shared\obj\Debug\netstandard2.1\HelloBlazor.Shared.AssemblyInfoInputs.cache
+C:\Users\gihan.c\source\repos\HelloBlazor\HelloBlazor\HelloBlazor\Shared\obj\Debug\netstandard2.1\HelloBlazor.Shared.AssemblyInfo.cs
+C:\Users\gihan.c\source\repos\HelloBlazor\HelloBlazor\HelloBlazor\Shared\obj\Debug\netstandard2.1\HelloBlazor.Shared.csproj.CoreCompileInputs.cache
+C:\Users\gihan.c\source\repos\HelloBlazor\HelloBlazor\HelloBlazor\Shared\obj\Debug\netstandard2.1\HelloBlazor.Shared.dll
+C:\Users\gihan.c\source\repos\HelloBlazor\HelloBlazor\HelloBlazor\Shared\obj\Debug\netstandard2.1\HelloBlazor.Shared.pdb
+C:\Users\gihan.c\source\repos\HelloBlazor\HelloBlazor\HelloBlazor\Shared\obj\Debug\netstandard2.1\HelloBlazor.Shared.csproj.AssemblyReference.cache

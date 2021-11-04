@@ -1,0 +1,73 @@
+﻿@page "/login"
+@using HelloBlazor.Shared
+@using HelloBlazor.ViewModels
+
+<h1>User Details</h1>
+
+<div class="col-12">
+    <input type="text" @bind="_profileViewModel.FirstName" class="form-control" placeholder="first name" />
+    <br />
+    <input type="text" @bind="_profileViewModel.LastName" class="form-control" placeholder="Last name" />
+    <br />
+    <input type="text" @bind="_profileViewModel.EmailAddress" class="form-control" placeholder="Email" />
+    <br />
+    <button class="btn btn-primary" @onclick="UpdateProfile">Update Profile</button>
+    <button class="btn btn-primary" @onclick="GetProfile">Get Profile</button>
+    <button class="btn btn-primary" @onclick="GetNextUser">Next User</button>
+    <span>&nbsp;&nbsp;</span>@_profileViewModel.Message
+
+
+</div>
+
+
+
+
+@code {
+
+    private ProfileViewModel _profileViewModel = new ProfileViewModel();
+    private List<UserDetails> Userdetail { get; set; } = new List<UserDetails>();
+    public int count = 0, nav = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        Userdetail.Add(new UserDetails(0, "Ashan", "Saranga", "Ashan@gmail.com"));
+        Userdetail.Add(new UserDetails(1, "Kasun", "Kalhara", "Kasun@gmail.com"));
+        Userdetail.Add(new UserDetails(2, "kamal", "aththanayaka", "Kamal@gmail.com"));
+        nav = 2;
+    }
+
+    public void UpdateProfile()
+    {
+        nav++;
+        Userdetail.Add(new UserDetails(nav, _profileViewModel.FirstName, _profileViewModel.LastName, _profileViewModel.EmailAddress));
+        _profileViewModel.Message = "profile updated successfully";
+
+    }
+
+    public void GetProfile()
+    {
+        _profileViewModel.FirstName = Userdetail[0].FirstName;
+        _profileViewModel.LastName = Userdetail[0].LastName;
+        _profileViewModel.EmailAddress = Userdetail[0].Email;
+        _profileViewModel.Message = "profile loaded successfully";
+        count = 1;
+    }
+
+    public void GetNextUser()
+    {
+        if (count <= nav)
+        {
+            _profileViewModel.FirstName = Userdetail[count].FirstName;
+            _profileViewModel.LastName = Userdetail[count].LastName;
+            _profileViewModel.EmailAddress = Userdetail[count].Email;
+            _profileViewModel.Message = "Next User loaded successfully";
+            count++;
+        }
+        else
+        {
+            _profileViewModel.Message = "No more users in the List..!";
+        }
+    }
+
+}

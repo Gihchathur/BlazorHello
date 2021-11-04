@@ -1,0 +1,31 @@
+﻿@page "/contact"
+@using HelloBlazor.Shared
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+
+<div class="col-12">
+    @foreach (var contact in Userdetail)
+    {
+        <a href="/profile/@contact.FirstName" class="list-group-item list-group-item-action flex-column align-items-start">@contact.FirstName <span> </span> @contact.LastName</a>
+    }
+</div>
+
+@code {
+
+    private List<UserDetails> Userdetail { get; set; } = new List<UserDetails>();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        Userdetail.Add(new UserDetails(1, "Amal", "Perera"));
+        Userdetail.Add(new UserDetails(2, "Kasun", "Kalhara"));
+        Userdetail.Add(new UserDetails(3, "kamal", "aththanayaka"));
+    }
+
+    private void NavigatetoLogin()
+    {
+        NavigationManager.NavigateTo("/profile");
+    }
+
+}
